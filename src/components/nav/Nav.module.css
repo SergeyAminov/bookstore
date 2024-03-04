@@ -3,7 +3,8 @@
     background-color: black;
 }
 
-.nav a {
+.nav a,
+.logout {
     padding: 8px 12px;
     text-decoration: none;
     color: white;
@@ -11,8 +12,19 @@
     transition: linear 0.2s;
 }
 
-.nav a:hover {
-    color:lightpink;
+.logout {
+    background-color: black;
+    border: none;
+    font-size: inherit;
+}
+
+.nav a:hover,
+.logout:hover {
+    color: lightpink;
+}
+
+.logout:hover {
+    cursor: pointer;
 }
 
 .divider {

@@ -1,30 +1,9 @@
-import { BookCard } from "@/components/bookcard/BookCard";
-import axios from "axios";
 import { useEffect, useState } from "react";
+import axios from "axios";
+import { BookCard } from "@/components/bookcard/BookCard";
+import { TBook } from "@/types/types";
 
 import s from "./Catalog.module.css";
-
-type TAuthor = {
-    id: number,
-    fullName: string
-}
-
-type TGenre = {
-    id: number,
-    genre: string,
-}
-
-export type TBook = {
-    id: number,
-    title: string,
-    author: TAuthor,
-    releaseDate: Date,
-    genre: TGenre,
-    cover: string,
-    pages: number,
-    price: number,
-    amount: number,
-}
 
 export const Catalog = () => {
     const [catalog, setCatalog] = useState<TBook[]>([])

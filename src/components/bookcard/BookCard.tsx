@@ -1,5 +1,4 @@
-import { TBook } from "@/pages/catalog/Catalog";
-
+import { TBook } from "@/types/types";
 import s from "./BookCard.module.css";
 
 type TBookCardProps = {
