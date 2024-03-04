@@ -1,0 +1,12 @@
+.pageHolder {
+    width: 1200px;
+    flex: 2 1;
+    margin: auto;
+    background-color: whitesmoke;
+}
+
+@media screen and (max-width: 1200px) {
+    .pageHolder {
+        width: 100%;
+    }
+}

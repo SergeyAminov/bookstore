@@ -1,6 +1,9 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { createRoot } from "react-dom/client";
-import { App } from "@/App";
+import { App } from "@/components/app/App";
+import { Catalog } from "./pages/catalog/Catalog";
+
+import "./index.css";
 
 const root = document.getElementById('root')
 
@@ -14,6 +17,12 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <App />,
+        children: [
+            {
+                path: "/catalog",
+                element: <Catalog />
+            }
+        ]
     }
 ])
 
