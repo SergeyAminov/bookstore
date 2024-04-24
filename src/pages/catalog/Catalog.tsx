@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { BookCard } from "@/components/bookcard/BookCard";
 import { TBook } from "@/types/types";
+import { BASE_URL } from "@/api/constants";
 
 import s from "./Catalog.module.css";
 
@@ -9,7 +10,7 @@ export const Catalog = () => {
     const [catalog, setCatalog] = useState<TBook[]>([])
 
     useEffect(() => {
-        const url = 'http://localhost:8080/api/books'
+        const url = BASE_URL + '/api/books'
         axios.get<TBook[]>(url)
             .then(({ data }) => {
                 setCatalog(data)

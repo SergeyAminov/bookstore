@@ -13,6 +13,11 @@
     width: 190px;
 }
 
+.bookCard:hover {
+    background-color: snow;
+    cursor: pointer;
+}
+
 .title, .author {
     text-align: center;
 }

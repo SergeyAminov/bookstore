@@ -54,6 +54,7 @@ export const useLogin = ({ setUserData }: TUseLoginProps) => {
             })
             .catch(err => {
                 console.log(err.message)
+                setIsLoading(false)
             })
     }
 

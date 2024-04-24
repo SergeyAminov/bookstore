@@ -7,6 +7,7 @@ import { Catalog } from "./pages/catalog/Catalog";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import Profile from "./pages/profile/Profile";
+import Book from "./pages/book/Book";
 import { persistor, store } from "./store";
 
 import "./index.css";
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
             {
                 path: "/catalog",
                 element: <Catalog />
+            },
+            {
+                path: "/catalog/:id",
+                element: <Book />
             },
             {
                 path: "/login",
